@@ -1,0 +1,7 @@
+# Doxyfile configuration file
+
+PROJECT_NAME           = MyProject
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = YES
+RECURSIVE              = YES
+GENERATE_LATEX         = NO
