@@ -1,7 +1,7 @@
-#include "MyProject.hpp"
+#include "utils.h"
 #include <iostream>
 
 int main() {
-    std::cout << "Hello, C++ Project!" << std::endl;
+    std::cout << "Result: " << add(5, 10) << std::endl;
     return 0;
 }

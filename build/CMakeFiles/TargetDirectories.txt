@@ -1,0 +1,5 @@
+/home/dervis/workspace/PipelineProject/build/CMakeFiles/MyCppProject.dir
+/home/dervis/workspace/PipelineProject/build/CMakeFiles/run_tests.dir
+/home/dervis/workspace/PipelineProject/build/CMakeFiles/test.dir
+/home/dervis/workspace/PipelineProject/build/CMakeFiles/edit_cache.dir
+/home/dervis/workspace/PipelineProject/build/CMakeFiles/rebuild_cache.dir
