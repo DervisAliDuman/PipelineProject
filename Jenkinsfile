@@ -29,13 +29,22 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
+                echo 'Checking SonarQube scanner version...'
+                sh '/opt/sonar-scanner-4.8.0.2856-linux/bin/sonar-scanner --version'
+                
                 echo 'Running SonarQube analysis...'
                 withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'TOKEN')]) {
-                    sh "sonar-scanner -Dsonar.projectKey=MyCppProject -Dsonar.sources=src -Dsonar.login=${TOKEN}"
+                    sh """
+                        /opt/sonar-scanner-4.8.0.2856-linux/bin/sonar-scanner \
+                        -Dsonar.projectKey=MyCppProject \
+                        -Dsonar.sources=src \
+                        -Dsonar.login=${TOKEN} \
+                        -Dsonar.host.url=${SONAR_HOST_URL}
+                    """
                 }
+                echo 'SonarQube analysis completed.'
             }
         }
-
         stage('Unit Tests') {
             steps {
                 echo 'Running unit tests...'
